@@ -17,13 +17,13 @@ class CreateTransaksisTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('id_user');
-            $table->integer('id_driver');
-            $table->int('id_admin');
-            $table->float('berat_total');
-            $table->float('harga_total');
+            $table->integer('id_driver')->nullable();
+            $table->integer('id_admin')->nullable();
+            $table->float('berat_total')->nullable();
+            $table->integer('harga_total')->nullable();
             $table->enum('status_ambil', ['belum_diverifikasi', 'sampai_gudang', 'sedang_diambil', 'selesai', 'sudah_diambil', 'sudah_diverifikasi']);
             $table->tinyInteger('is_sampah_edited');
-            $table->date('tanggal_ambil');
+            $table->date('tanggal_ambil')->nullable();
         });
     }
 

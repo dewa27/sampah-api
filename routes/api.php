@@ -33,7 +33,3 @@ Route::middleware(['auth:sanctum', 'type.driver'])->group(function () {
 Route::get('/user/verify', [AuthUserController::class, 'verify'])->name('verification.verify');
 Route::post('/user/login', [AuthUserController::class, 'login']);
 Route::post('/user/register', [AuthUserController::class, 'register']);
-
-// Route::get('/dashboard', function () {
-//     return "aaa";
-// });
